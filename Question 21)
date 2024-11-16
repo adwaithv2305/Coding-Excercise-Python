@@ -1,0 +1,10 @@
+def armstrong(n):
+    numstr=str(n)
+    numdigits=len(numstr)
+    sumofpowers=0
+    for i in numstr:
+        sumofpowers+=int(i)**numdigits
+    return "Armstrong" if sumofpowers==n else "Not Armstrong"
+n=int(input("Enter the number: "))
+y=armstrong(n)
+print(y)
