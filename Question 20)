@@ -1,0 +1,21 @@
+data={
+    "Sugar level": 15,
+    "Blood pressure": 32,
+    "Heartbeat rate": 71,
+    "weight": 65,
+    "fat percentage": 10
+}
+patientdata={}
+for i in data:
+    patientdata[i]=int(input(f"Enter{i}: "))
+difference={}
+for i in data:
+    diff=data[i]-patientdata[i]
+    difference[i] = diff
+    if diff!=0:
+        print(f"{i}:{diff}")
+        if diff>0:
+            print(f"{i} is {diff} more than the ideal value")
+        else:
+            print(f"{i} is {abs(diff)} less than the ideal value")
+print(difference)
