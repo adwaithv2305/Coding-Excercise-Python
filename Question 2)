@@ -1,0 +1,4 @@
+x=input("Enter the words: ")
+x=x.split(',')
+x.sort()
+print(','.join(x))
