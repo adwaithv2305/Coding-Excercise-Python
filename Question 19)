@@ -1,0 +1,12 @@
+def cyc(direction,string,times):
+
+    for i in range(times):
+        if direction==1:
+            string=string[1:]+string[0]
+        elif direction==2:
+            string=string[-1]+string[:-1]
+        print(string)
+direction=int(input("Enter direction(1 for first to last, 2 for last to first): "))
+string=input("Enter the string: ")
+times=int(input("Enter the number of times to rotate: "))
+cyc(direction,string,times)
