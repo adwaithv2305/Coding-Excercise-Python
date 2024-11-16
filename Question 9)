@@ -1,0 +1,10 @@
+data=[]
+while True:
+    userinput=input("Enter name, age and height/press Enter to stop:  ")
+    if not userinput:
+        break
+    data.append(tuple(userinput.split(',')))
+def sortedkey(item):
+    return (item[0],int(item[1]),int(item[2]))
+sorteddata=sorted(data,key=sortedkey)
+print(sorteddata)
