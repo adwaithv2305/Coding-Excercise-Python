@@ -1,0 +1,8 @@
+binary_str=input("Enter the binary string: ")
+ones_indices=[i for i,char in enumerate(binary_str) if char=='1']
+num_pairs=0
+n=len(ones_indices)
+for i in range(n):
+    for j in range(i+1,n):
+        num_pairs+=1
+print(num_pairs)
