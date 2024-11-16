@@ -1,0 +1,12 @@
+netamount=0
+while True:
+    trans=input("Enter transaction/press enter to exit: ")
+    if not trans:
+        break
+    process,amount=trans.split()
+    amount=int(amount)
+    if process=='D':
+        netamount+=amount
+    elif process=='W':
+        netamount-=amount
+print(netamount)
