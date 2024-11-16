@@ -1,0 +1,30 @@
+x=0
+y=0
+while True:
+    move=input("Enter the movement/press Enter to stop: ")
+    if not move:
+        break
+    dir,steps=move.split()
+    steps=int(steps)
+    if dir.casefold()=="up":
+        y+=steps
+    elif dir.casefold()=="down":
+        y-=steps
+    elif dir.casefold()=="left":
+        x-=steps
+    elif dir.casefold()=="right":
+        x+=steps
+distance=(x**2+y**2)**0.5
+print(round(distance))
+Question 11) 
+inp=input("Enter the string: ").lower()
+result=""
+count=1
+for i in range(1,len(inp)):
+    if inp[i]==inp[i-1]:
+        count+=1
+    else:
+        result+=inp[i-1]+str(count)
+        count=1
+result+=inp[-1]+str(count)
+print(result)
