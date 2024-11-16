@@ -1,0 +1,20 @@
+passwords=input("Enter the password to check for validity: ").split(',')
+valid = []
+for password in passwords:
+    if 6<=len(password)<=12:
+        haslower=False
+        hasupper=False
+        hasdigit=False
+        hasspecial=False
+        for j in password:
+            if j.islower():
+                haslower=True
+            elif j.isupper():
+                hasupper=True
+            elif j.isdigit():
+                hasdigit=True
+            elif j in "$#@":
+                hasspecial=True
+        if haslower and hasupper and hasdigit and hasspecial:
+            valid.append(password)
+print(",".join(valid))
