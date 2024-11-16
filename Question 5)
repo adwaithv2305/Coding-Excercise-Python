@@ -1,0 +1,11 @@
+sentence=input("Enter the sentence: ")
+numletters=0
+numdigits=0
+for i in sentence:
+    if i.isalpha():
+        numletters+=1
+    elif i.isdigit():
+        numdigits+=1
+print(numletters)
+print(numdigits)
+
